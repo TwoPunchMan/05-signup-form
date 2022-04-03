@@ -3,6 +3,12 @@
 	src: url(fonts/Norse-Bold.otf);
 }
 
+:root {
+	--white-color: white;
+	--olive-color: #596d48;
+	--generic-box-shadow: 2px 2px 2px 1px rgba(197, 196, 196, 0.63);
+}
+
 body {
 	/*background-image: url(images/antelope-canyon.jpg);*/
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -13,17 +19,27 @@ body {
 
 input {
 	outline: none;
-	border: 1px solid #e5e7eb;
-	background-color: #FFFFFF;
+	border: 1px solid #dcdfe4;
+	border-radius: 4px;
+	background-color: #fdfefe;
 	padding: 4px 14px;
+	height: 1.5rem;
+	font-size: 14px;
+	width: 200px;
 }
 
 input[type=text]:focus {
 	border: 1px solid rgb(0, 0, 255);
-	border-radius: 3px;
-	background-color: white;
-	box-shadow: 2px 2px 2px 1px rgba(197, 196, 196, 0.573);
+	border-radius: 4px;
+	background-color: var(--white-color);
+	box-shadow: var(--generic-box-shadow);
 	/*box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.582);*/
+}
+
+label {
+	font-size: 0.9rem;
+	font-weight: 500;
+	letter-spacing: 1px;
 }
 
 /* 
@@ -32,66 +48,96 @@ inputs - #E5E7EB;
 password need error class
 :focus input class
  */
-.image-odin {
-	display: flex;
-}
 
-.image-odin > div {
-	font-family: 'odin-lined';
-}
+ /* Container */
 
 .container {
 	display: flex;
 }
 
-.container .image-section {
+.image-section {
 	flex: 1 1 0%;
 }
 
-.container .white-section {
+.white-section {
 	flex: 2 1 0%;
 }
 
-.form-control > div {
-	padding: 48px;
+/* Left side */
+
+.image-odin {
+	display: flex;
+	background-color: rgba(0,0,0,1);
 }
 
-.form-paragraph {
-	font-size: 24px;
-	font-weight: 480;
+.image-odin > div {
+	font-family: 'odin-lined';
+	color: var(--white-color);
+	font-size: 4rem;
 }
 
 .image-section {
 	height: 100vh;
 }
 
-.image {
+.image-background {
 	height: 100vh;
 	margin: 0 auto;
 }
 
 .image-credits {
-	color: white;
+	color: var(--white-color);
 	text-align: center;
 	position: absolute;
 }
 
+/* Right side */
+
+.form-paragraph {
+	font-size: 24px;
+	font-weight: 480;
+	margin-top: 108px;
+	margin-bottom: 24px;
+	padding: 48px;
+}
+
 .form-input {
-	box-shadow: 0 6px 4px -2px rgb(212, 212, 212);
-	background-color: #FFFEFE;
+	font-size: 24px;
+	box-shadow: 0 6px 4px -2px rgb(212, 212, 212), 
+				0 -2px 4px -3px rgb(212, 212, 212);
+	background-color: var(--white-color);
+	opacity: 0.7;
+	padding: 20px 48px 48px 48px;
 }
 
 .form-input > div {
 	display: flex;
-	justify-content: space-between;
+	padding-bottom: 12px;
+}
+
+.form-input > div:first-child {
+	padding-bottom: 20px;
+}
+
+.form-input > div > div:nth-child(2) {
+	margin-left: 84px;
+}
+
+.form-input > div:last-child {
+	padding-bottom: 0;
+}
+
+.form-account {
+	padding: 48px;
 }
 
 .account-btn {
-	background-color: #596d48;
-	color: white;
+	background-color: var(--olive-color);
+	box-shadow: var(--generic-box-shadow);
+	color: var(--white-color);
 	border-radius: 8px;
 	font-size: 16px;
-	padding: 12px 24px;
+	padding: 16px 48px;
 	margin-bottom: 32px;
 	border-style: solid;
 	border-width: 0px;
