@@ -5,15 +5,22 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
-		<title>Sign Up Form</title>
+		<script src="script.js" defer></script>
+		<title>Sign Up Form</title>		
 	</head>
 	<body>
 		<div class="container">
+
+			<!-- Left section / Image-->
 			<div class="image-section">
+
+				<!-- Odin Logo-->
 				<div class="image-odin">
 					<img src="images/odin-lined.png"> 
 					<div>ODIN</div>
 				</div>
+
+
 				<img class="image-background" src="images/antelope-canyon.jpg">
 				<div class="image-credits">
 					Photo by <a href="https://unsplash.com/@madhu_shesharam?utm_source=
@@ -22,54 +29,73 @@
 					source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 				</div>
 			</div>
+
+			<!-- Right section / Form -->
 			<div class="white-section">
-				<div class="form-control">
-					<div class="form-paragraph">
-						This is not a real life online service! You know you need something
-						<br>
-						like this in your life to help you realize your deepest dreams.
-						<br>
-						Sign up <em>now</em> to get started.
-						<br><br>
-						You <em>know</em> you want to.
-					</div>
-					<div class="form-input">
-						<div style="font-weight: 480;">Let's do this!</div>
-						<div>
+
+				<!-- Form paragraph intro -->
+				<div class="form-paragraph">
+					This is not a real life online service! You know you need something
+					<br>
+					like this in your life to help you realize your deepest dreams.
+					<br>
+					Sign up <em>now</em> to get started.
+					<br><br>
+					You <em>know</em> you want to.
+				</div>
+
+				<!-- Form Control -->
+				<div class="form-input">
+					<form method="post">
+						<div class="form-data">
+							<div style="font-weight: 480;">Let's do this!</div>
 							<div>
-								<label for="first_name">FIRST NAME</label><br>
-								<input type="text" id="first_name">
+								<div>
+									<label for="first_name">FIRST NAME</label><br>
+									<input type="text" id="first_name" name="first_name" pattern="[a-zA-Z]+" title="Alphabet characters Only">
+								</div>
+								<div>
+									<label for="last_name">LAST NAME</label><br>
+									<input type="text" id="last_name" name="last_name" pattern="[a-zA-Z]+" title="Alphabet characters Only">
+								</div>
 							</div>
 							<div>
-								<label for="last_name">LAST NAME</label><br>
-								<input type="text" id="last_name">
+								<div>
+									<label for="email">EMAIL</label><br>
+									<input type="text" id="email" name="email">
+								</div>
+								<div>
+									<label for="phone_number">PHONE NUMBER</label><br>
+									<input type="text" id="phone_number" name="phone_number" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+								</div>
+							</div>
+							<div>
+								<div>
+									<label for="password">PASSWORD</label><br>
+									<input type="password" class="error" id="password" name="password" required>
+									<div id="error"></div>
+								</div>
+								<div>
+									<label for="pw_confirm">CONFIRM PASSWORD</label><br>
+									<input type="password" class="error" id="pw_confirm" name="pw_confirm" required>
+								</div>
 							</div>
 						</div>
-						<div>
-							<div>
-								<label for="email">EMAIL</label><br>
-								<input type="text" id="email">
-							</div>
-							<div>
-								<label for="phone_number">PHONE NUMBER</label><br>
-								<input type="text" id="phone_number">
-							</div>
+
+						<!-- Button Create account -->
+						<div class="form-account">
+							<button class="account-btn" type="submit"><strong>Create Account</strong></button>
+							<div>Already have an account? <strong style="color: #596d48">Log in</strong></div>
 						</div>
-						<div>
-							<div>
-								<label for="password">PASSWORD</label><br>
-								<input type="password" id="password">
-							</div>
-							<div>
-								<label for="pw_confirm">CONFIRM PASSWORD</label><br>
-								<input type="password" id="pw_confirm">
-							</div>
-						</div>
-					</div>
-					<div class="form-account">
-						<button class="account-btn"><strong>Create Account</strong></button>
-						<div>Already have an account? <strong style="color: #596d48">Log in</strong></div>
-					</div>
+					</form>
+				</div>
+				
+				<!-- Credits -->
+				<div>
+					<p style="margin: 0 0 24px 24px">Copyright © 2022 TwoPunchMan
+					<a href="https://github.com/TwoPunchMan/05-signup-form">
+					<img style="width: 8%; height: 8%" src="images/GitHub_Logo.png"></a>
+					</p>
 				</div>
 			</div>
 		</div>
